@@ -14,13 +14,17 @@ To lose weight, do not necessarily hunger and give up delicious food! The progra
 ## Tech stack
 *	Angular CLI
 *	TypeScript
-*	scss
+*	Scss
 
 
 ## Demo
 *Firebase [Calories calculate](https://calories-c7494.firebaseapp.com/)
 
 ## Mockups
-![Calories]()
+![Calories](https://i.ibb.co/hChQ3Gj/calories1.png)
+![Calories](https://i.ibb.co/sP75gCJ/calories2.png)
+![Calories](https://i.ibb.co/CQ47rc3/calories3.png)
+
+
 
 
