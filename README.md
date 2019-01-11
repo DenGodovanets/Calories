@@ -6,8 +6,8 @@ To lose weight, do not necessarily hunger and give up delicious food! The progra
 *	Improve knowledge with DOM events
 
 ## ELEKS Front-Camp 2018
-*	Course curator - [Dmytro Voloshyn](https://www.facebook.com/dmytro.voloshyn.9?__tn__=%2Cd-]-h-R&eid=ARAqhxGRagHwwm2EQ1ISmiZKCaU8WpMMY1jjeHv9J85tdPJhZQxBRkZknNODeDwN1asv-7BvBzzYHkyh)
-*	Front-camp [facebook](https://github.com/dosandk)
+*	Course curator - [Dmytro Voloshyn](https://www.facebook.com/dmytro.voloshyn.9)
+*	Front-camp [facebook](https://www.facebook.com/groups/270300106928894/)
 
 
 
@@ -21,6 +21,6 @@ To lose weight, do not necessarily hunger and give up delicious food! The progra
 *Firebase [Calories calculate](https://calories-c7494.firebaseapp.com/)
 
 ## Mockups
-![Economic](https://i.ibb.co/7kFnzxW/ecomon1.png)
-![Economic](https://i.ibb.co/7z2mYsX/ecomon404.png)
+![Calories]()
+
 
