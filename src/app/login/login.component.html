@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <form name="form" (ngSubmit)="loginForm.form.valid && login(model)" #loginForm="ngForm" novalidate>
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label for="email">Email</mat-label>
+          <input matInput type="text" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel"
+            required email maxlength="100" />
+          <div *ngIf="loginForm.submitted && email.invalid">
+            <div *ngIf="email.errors.required">required</div>
+            <div *ngIf="email.errors.email">must be a valid email address</div>
+          </div>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label for="password">Password</mat-label>
+          <input matInput type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel"
+            required minlength="6" maxlength="100" />
+          <div *ngIf="loginForm.submitted && password.invalid">
+            <div *ngIf="password.errors.required">required</div>
+            <div *ngIf="password.errors.minlength">must be at least 6 characters</div>
+          </div>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <button mat-raised-button color="primary" [disabled]="!loginForm.form.valid" class="btn btn-primary">Login</button>
+      </div>
+    </form>
+  </div>
+  <div class="row">
+    <mat-icon svgIcon="facebook" (click)="tryFacebookLogin()" style="cursor: pointer;"></mat-icon>
+    <mat-icon svgIcon="google-plus" (click)="tryGoogleLogin()" style="cursor: pointer;">Register with Google</mat-icon>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <p>Don't have an account yet? <a href="/register">Create one</a></p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+<form #formYourAge="ngForm">
+  <div class="homeHeader">
+    <div>Choose your calories norm</div>
+    <select name="yourCaloriesNorm" [(ngModel)]="yourCaloriesNorm" (ngModelChange)="chooseYourNorm(yourCaloriesNorm)"
+      required>
+      <option>Girl:12-18 years</option>
+      <option>Woman:18-65 years</option>
+      <option>Boys:12-20 years</option>
+      <option>Man:20-65 years</option>
+    </select>
+    <div>Your day norm:{{yourCalories}} calories</div>
+    <div class="yourMenu">Your menu:</div>
+    <ul class="selectedItem">
+      <li (click)="removeItem(item)" *ngFor="let item of selectedItems">{{item.name}}:{{item.calories}} cal.</li>
+    </ul>
+    <div class="totalCalories">
+      <p>Your food include {{summFromLocal}} calories</p>
+      <div class="warningCalories">{{warningCalories}}</div>
+    </div>
+    <button class="deleteRation" (click)="deleteRation()">Clear all</button>
+  </div>
+  <div class="foodButtons">
+    <div class="itemsButtons">
+      <div (click)="addCalories($event,item)" class="button" style="border: 1px solid lightseagreen; background-color: lightblue;"
+        *ngFor="let item of itemsDrinks">
+        <span style="font-size: 16px;">{{item.name}}</span><br>
+        <span>кал: {{item.calories}}</span>
+        <button name='deleteFood'>X</button>
+      </div>
+    </div>
+    <div class="itemsButtons">
+      <div (click)="addCalories($event,item)" *ngFor="let item of itemsFirst" style="border: 1px solid lightseagreen; background-color: lightgreen;">
+        <span style="font-size: 16px;">{{item.name}}</span><br>
+        <span>cal: {{item.calories}}</span>
+        <button name='deleteFood'>X</button>
+      </div>
+    </div>
+    <div class="itemsButtons">
+      <div (click)="addCalories($event,item)" *ngFor="let item of itemsSecond" style="border: 1px solid orangered; background-color: rgb(214, 0, 0);">
+        <span style="font-size: 16px;">{{item.name}}</span><br>
+        <span>cal: {{item.calories}}</span>
+        <button name='deleteFood'>X</button>
+      </div>
+    </div>
+    <div class="itemsButtons">
+      <div (click)="addCalories($event,item)" *ngFor="let item of itemsDeserts" style="border: 1px solid lightseagreen; background-color: goldenrod;">
+        <span style="font-size: 16px;">{{item.name}}</span><br>
+        <span>cal: {{item.calories}}</span>
+        <button name='deleteFood'>X</button>
+      </div>
+    </div>
+  </div>
+</form>
+<form #formCtrl="ngForm">
+  <div class="addFood">
+    <span>Add food</span>
+    <div>
+      <input name="name" [(ngModel)]="name" placeholder="Enter food name" required />
+    </div>
+    <div>
+      <input name="calories" type='text' pattern="[0-9]+" [(ngModel)]="calories" placeholder="Enter calories"
+        required />
+    </div>
+    <div>
+      <label>Choose category of foods</label><br>
+      <select name='category' [(ngModel)]="selected" required>
+        <option *ngFor="let type of productTypes;" [value]="type.id" [selected]="type.id == selected">
+          {{type.name}}
+        </option>
+      </select>
+    </div>
+    <button (click)="createNewFood()" [disabled]="!formCtrl.form.valid">Add</button>
+  </div>
+</form>

@@ -1,0 +1,9 @@
+<header>
+	<div [ngClass]='{"logo":true}'><a routerLink="">Calories</a></div>
+	<nav>
+		<a routerLink="/about">About</a>
+    <a [routerLink]="['/login']" *ngIf="!userIsLoggedIn()">Login</a>
+    <a [routerLink]="['/register']" *ngIf="!userIsLoggedIn()">Sign up</a>
+		<a (click)="logout()" *ngIf="userIsLoggedIn()">Logout</a>
+	</nav>
+</header>

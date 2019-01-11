@@ -1,0 +1,38 @@
+header {
+    height: 60px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+        text-decoration: none;
+        color:white;
+        font-size: 20px;
+        margin-right: 15px;
+    }
+    .logo {
+        margin-left: 2%;
+        a {
+            color:white;
+            font-size:40px;
+            font-weight:bold;        
+        }
+    }
+    .active {
+        color:seagreen;
+    }
+}
+.footer {
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    color:white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    clear: both;
+    bottom: 0;
+}
+body {
+    margin: 0;
+}
